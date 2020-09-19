@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iqra Bootcamp Class</title>
+<style>
+    body{
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
+    }
+    header{
+        background-image: url(./image/alquran4.png);
+        height: 600px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 90px;
+    } 
+    .navbar-left img{
+        width: 100px;
+    }
+    .navbar-right{
+        display: flex;
+        align-items: center;
+    }
+    .navbar-right--link > .link{
+        padding: 0px 20px;
+        color: white;
+        font-weight: 500 px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .navbar-right--link > .link:hover{
+        color: #77ed9e;
+        font-size: 17px;
+    }
+    .navbar-right--button button{
+        border: 1px transparent;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 15px;
+        background-color: #69F786;
+        cursor: pointer;
+        color: white;
+    }
+    .navbar-right--button:hover{
+        box-shadow: 0px 20px 10px -5px rgba(0,0,0,.5);
+        opacity: .7;
+        margin-top: 5px;
+    }
+    .linetitle .linetitle-top{
+        text-align: center;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 200px;
+        color: white;
+    }
+    .linetitle .linetitle-button{
+        text-align: center;
+    }
+    .linetitle-button button{
+        border-radius: 10px;
+        border: 1px transparent white;
+        background-color: #69F786;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 8px 20px;
+        margin: 0px 5px;
+        color: white;
+        cursor: pointer;
+    }
+    .about{
+        margin: 70px 0px;
+    }
+    .about .about-heading{
+        text-align: center;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .about .about-heading h1::after{
+        content: '_____';
+        display: block;
+        color: #4abeed;
+        font-size: 30px;
+        margin-top: -10px
+    }
+    .about-paragraf p{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 35px;
+        color: #757172;
+        text-align: center;
+    }
+    .about .about-button{ 
+        text-align: center;
+    }
+    .about-button button{
+        border-radius: 5px;
+        border: 2px transparent;
+        background-color: #4abeed;
+        padding: 10px 25px;
+        font-size: 18px;
+        cursor: pointer;
+        color: white;
+    }
+    .facility{
+        display: flex;
+        justify-content: space-around;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .facility-title h1{
+        font-size: 35px;
+    }
+    .facility-title h1::after{
+        content: '______';
+        display: block;
+        font-size: 30px;
+        color: #4abeed;
+        margin-top: -20px;
+    }
+    .whyiqra img{
+        width: 100px;
+        height: 70px;
+        margin: 30px 50px;
+    }
+    .whyiqra-learn{
+        display: flex;
+    }
+    .whyiqra-location{
+        display: flex;
+    }
+    .whyiqra-free{
+        display: flex;
+    }
+    .whyiqra h1{
+        font-size: 40px;
+    }
+    .whyiqra p{
+        color: #757172;
+        line-height: 25px;
+    }
+    .fitur{
+        margin-top: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .fitur-iqra--title h1{
+        text-align: center;
+        font-size: 40px;
+    }
+    .fitur-iqra--title p{
+        text-align: center;
+        font-size: 18px;
+        line-height: 35px;
+        color: #757172;
+    }
+    .fitur-iqra--title h1::after{
+        content: '____';
+        display: block;
+        font-size: 45px;
+        color: #4abeed;
+        margin-top: -35px;
+    }
+    .fitur-iqra{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 150px;
+        margin-top: 50px;
+    }
+    .fitur-iqra p{
+        text-align: center;
+        color: #757172;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .fitur-iqra img{
+        width: 200px;
+        height: 150px;
+    }
+    .gallery{
+        margin-top: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .gallery-title h1{
+        text-align: center;
+        font-size: 40px;
+    }
+    .gallery-title h1::after{
+        content: '____';
+        display: block;
+        font-size: 35px;
+        color: #4abeed;
+        margin-top: -20px;
+    }
+    .gallery-image img{
+        width: 350px;
+        height: 200px;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    .gallery-image{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .team{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .ourteam h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .ourteam p{
+        text-align: center;
+        color: #757172;
+        font-size: 20px;
+    }
+    .ourteam h1::after{
+        content: '____';
+        display: block;
+        margin-top: -20px;
+        color: #4abeed;
+    }
+    .team-image img{
+        width: 250px;
+        height: 250px;
+        border-radius: 250px;
+    }
+    .register{
+        text-align: center;
+        margin-top: 70px;
+    }
+    .register-paragraf p{
+        font-size: 30px;
+        font-weight: 500px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .register-button button{
+        border: 2px transparent;
+        border-radius: 5px;
+        width: 230px;
+        height: 50px;
+        font-size: 18px;
+        background-color: #4abeed;
+        color: white;
+        cursor: pointer;
+    }
+    .footer-middle--logo img{
+        width: 175px;
+        height: 100px;
+    }
+    .footer-middle--support a{
+        display: table-row-group;
+        text-decoration: none;
+        color: #757172;
+        cursor: pointer;
+    }
+    .footer-middle--support a:hover{
+        text-decoration: underline;
+    }
+    .footer-middle--contact a{
+        display: table-row-group;
+        text-decoration: none;
+        color: cadetblue;
+        cursor: pointer;
+    }
+    .footer-middle--contact a:hover{
+        text-decoration: underline;
+    }
+    .footer-middle{
+        display: flex;
+        cursor: pointer;
+    }
+    .footer-middle{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 70px; 
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 25px;
+    }
+    .footer-mediasosial{
+        text-align: center;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+    .footer-mediasosial img{
+        text-align: center;
+        width: 40px;
+        height: 30px;
+    }
+    .footer-copyright{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #757172;
+    }
+</style>  
+</head>
+<body>
+    <header>
+        <navbar class="navbar">
+            <div class="navbar-left">
+                <img src="./image/iqra.svg" alt="logonavbar">
+            </div>
+            <div class="navbar-right">
+                <div class="navbar-right--link">
+                    <a class="link" href="#">Tentang kami</a>
+                    <a class="link" href="#">Mengapa Iqra</a>
+                    <a class="link" href="#">fitur</a>
+                    <a class="link" href="#">Galeri</a>
+                    <a class="link" href="#">Tim Kami</a>
+                    <a class="link" href="#">Kontak</a>
+                </div>
+            <div class="navbar-right--button">
+                <button>Daftar Sekarang</button>
+            </div>
+            </div>    
+        </navbar>
+    <div class="linetitle">
+        <div class="linetitle-top">
+            <h1 id="heading-line">Sebaik-baik kalian adalah orang yang belajar<br> Al-Qur`an dan mengajarkannya</h1>
+        </div>
+        <div class="linetitle-button">
+            <button onclick="changeText()">Mulai Mengaji</button>
+            <button onclick="addText()">Mulai Mengajar</button>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="about">
+            <div class="about-heading">
+                <h1>Apa itu IQRA</h1>
+            </div>
+            <div class="about-paragraf">
+                <p>Aplikasi IQRA (Indonesia Quran Reciter Application) merupakan aplikasi berbasis website<br> yang dapat mempertemukan sahabat muslim yang ingin belajar mengaji (mentee) dengan<br> sahabat muslim lainnya yang memiliki kemampuan dalam mengajarkan Al-Qur’an<br> (mentor) melalui metode pengajaran yang sudah ditentukan dengan tepat oleh tim kurator<br> kurikulum mengajar Al-Quran.</p>
+            </div>
+            <div class="about-button">
+                <button>Lihat Silabus</button>
+            </div>
+        </div>
+        <div class="facility">
+            <div class="facility-title">
+                <h1>Mengapa Kami</h1>
+            </div>
+            <div class="whyiqra">
+                <div class="whyiqra-learn">
+                    <div class="whyiqra-learn--image">
+                        <img src="./image/satu.svg" alt="talaqqi">
+                    </div>
+                <div class="whyiqra-learn--content">
+                    <h1>Belajar secara<br> langsung (Talaqqi)</h1>
+                    <p>IQRA memberi kemudahan bagi mentor dan mentee<br> untuk belajar mengaji secara langsung. Belajar secara<br> langsung merupakan metode belajar yang paling baik<br> dan mudah dalam mengajarkan Al-Quran.</p>
+                </div>
+            </div>
+                <div class="whyiqra-location">
+                    <div class="whyiqra-location--image">
+                        <img src="./image/dua.svg" alt="location">
+                    </div>
+                    <div class="whyiqra-location--content">
+                        <h1>Lokasi dan waktu<br> yang flexible</h1>
+                        <p>IQRA menghadirkan fitur yang memudahkan mentee<br> dan mentor belajar mengaji dengan waktu yang flexible<br> dan lokasi yang terdekat. Sehingga kita dapat belajar<br> mengaji dimanapun dan kapanpun.</p>
+                    </div>
+                </div>
+                <div class="whyiqra-free">
+                    <div class="whyiqra-free--image">
+                        <img src="./image/tiga.svg" alt="free">
+                    </div>
+                    <div class="whyiqra-free--content">
+                        <h1>Free</h1>
+                        <p>IQRA memastikan bahwa tidak ada biaya transaksi<br> antara mentee dan mentor dalam proses belajar mengaji.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fitur"> 
+            <div class="fitur-iqra--title">
+                <h1>fitur IQRA</h1>
+                <p>IQRA memiliki beberapa fitur yang memudahkan mentor dan mentee dalam menggunakan nya,<br>di antaranya.</p>
+            </div>
+            <div class="fitur-iqra">
+                <div class="fitur-iqra--proces">
+                    <img src="./image/fitursatu.svg" alt="proses">
+                    <p>Proses mengaji akan dikategorikan<br> menjadi 4 kelas yaitu Pratahsin,<br> Tahsin, Irama, dan Tahfidz.</p>
+                </div>
+                <div class="fitur-iqra--application">
+                    <img src="./image/fiturdua.svg" alt="aplikasi">
+                    <p>Melalui aplikasi IQRA kamu bisa<br> menjadi mentee sekaligus mentor,<br> semua tersedia dalam<br> 1 aplikasi.</p>
+                </div>
+                <div class="fitur-iqra--experience">
+                    <img src="./image/fiturtiga.svg" alt="experience">
+                    <p>Dapatkan pengalaman mengaji<br> bareng dengan cara yang mudah,<br> Dimanapun sesuai dengan jadwal<br> dan tempat kamu.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-title">
+                <h1>Galeri</h1>
+            </div>
+            <div class="gallery-image">
+                <img src="./image/galerisatu.jpg" alt="one">
+                <img src="./image/galeridua.jpg" alt="two">
+                <img src="./image/galeriiga.jpg" alt="three">
+                <img src="./image/galeriempat.jpg" alt="four">
+                <img src="./image/galerilima.jpg" alt="five">
+                <img src="./image/galerienam.jpg" alt="six">
+            </div>
+        </div>
+        <div class="team">
+            <div class="ourteam">
+                <h1>Tim Kami</h1>
+                <p>Halo, perkenalkan kami adalah tim di balik berjalannya IQRA</p>
+            </div>
+            <div class="team-image">
+                <img src="./image/timsatu.jpg" alt="one">
+                <img src="./image/timdua.jpg" alt="two">
+                <img src="./image/timtiga.jpg" alt="three">
+                <img src="./image/timempat.jpg" alt="four">
+                <img src="./image/timlima.jpg" alt="five">
+                <img src="./image/timenam.jpg" alt="six">
+                <img src="./image/timtujuh.jpg" alt="seven">
+                <img src="./image/timdelapan.jpg" alt="eight">
+                <img src="./image/timsembilan.jpg" alt="nine">
+                <img src="./image/timsepuluh.jpg" alt="ten">
+            </div>
+        </div>
+        <div class="register">
+            <div class="register-paragraf">
+                    <p>Ingin investasi Amal? Bergabunglah dengan Kami!</p>
+            </div>
+            <div class="register-button">
+                <button>Daptar Sekarang</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-middle">
+            <div class="footer-middle--logo">
+                <img src="./image/logo iqra bawah.png" alt="logofooter">
+            </div>
+                <div class="footer-middle--support">
+                    <h3>Dukungan</h3>
+                    <a href="#">About</a>
+                    <a href="#">term of use</a>
+                    <a href="#">privacy policy</a>
+                </div>
+                <div class="footer-middle--contact">
+                    <h3>Kontak</h3>
+                    <a href="#">admin@indo-iqra.com</a>
+                    <a href="#">082389953720 (Sani)</a>
+                    <a href="#">081212198511 (Mutia)</a>
+                </div>
+        </div>
+            <div class="footer-mediasosial">
+                <img src="./image/icon fb.png" alt="fb">                
+                <img src="./image/icon tw (1).png" alt="twitter">                
+                <img src="./image/icon ig.png" alt="instagram">                
+            </div>
+            <div class="footer-copyright">
+                <p>© Copyright Iqra 2018. All Rights Reserved.</p>
+            </div>
+    </footer>
+    <script>
+        function changeText(){
+            document.getElementById("heading-line").innerHTML="Belajar Al-quran Hukum-nya adalah WAJIB"
+        }
+        function addText(){
+            document.getElementById("heading-line").innerHTML="Amal Jariyah diantara-nya adalah Ilmu yang di ajarkan"
+        }
+    </script>
+</body>
+</html>
